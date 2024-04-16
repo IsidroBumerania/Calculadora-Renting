@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador TEMI</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <main>
+        <div class="contenedor1">
+            <h1>conoce a temi</h1>
+            <div class="contenedor1-1">
+                <p>Temi es un robot de servicios ideal para la asistencia e interacción con humanos.
+                    Este robot es capaz de realizar mapas 2D y localizarse en 3D,
+                    lo que le permite posteriormente navegar de forma autónoma y realizar cálculos de trayectorias
+                    mientras evita obstáculos. Para ello, Temi hace uso de una serie de sensores que,
+                    junto a una fusión de información en tiempo real,
+                    permiten una navegación totalmente autónoma y segura.
+                </p>
+                <figure>
+                        <img src="{{url_for('static', filename='temi.png')}}">
+                </figure>
+            </div>
+        </div>
+
+        <div class="box-simulador">
+            <h2>¿QUIERES SABER LOS BENEFICIOS DE TENER UN TEMI?</h2>
+
+            <div class="dialogo">
+                <p>Es facil, coloca el salario de un trabajador y enseguida te dare la respuesta</p>
+                <img class="imagen2" src="{{url_for('static', filename='temi1.png')}}">
+            </div>
+
+            <form class="calculo" action="/calcular" method="post">
+            <div class="label-dato">
+                <div class="label">
+                    <label for="salario">Salario Bruto Mensual:</label>
+                </div>
+                <div class="datos">
+                    <input id="salario" type="number" name="salario"  autofocus>
+                </div>
+            </div>
+            <br>
+        <div class="boton">
+                <button class="button" type="submit">CALCULAR</button>
+        </div><br>
+            </form>
+    </div>
+    <div class="informacion">
+        <p> Tomaremos como referencia los valores para un contrato indefinido, que son:
+            Contingencias comunes: 23,6 % del sueldo bruto.
+            Prestaciones por desempleo: 5,5 % del sueldo bruto. Este valor aumenta en los contratos temporales.
+            Contingencias profesionales: 3,5 % del sueldo bruto. (En realidad, este porcentaje depende de la actividad, pero tomaremos este valor como referencia).
+            Formación: 0,6 % del sueldo bruto.
+            FOGASA: 0,2 % del sueldo bruto.
+        </p>
+    </div><br><br>
+     <div class="box-beneficio">
+         <h3>Gastos Anuales</h3>
+         <div class="box-beneficio2">
+        <div class="box-tabla">
+            <table class="tabla2">
+                <caption>
+                    <h3>CUADRO COMPARATIVO</h3>
+                </caption>
+                <tr>
+                    <th>TEMI</th>
+                    <th>EMPLEADO</th>
+                </tr>
+                <tr>
+                    <td>{{temi}}€</td>
+                    <td>{{sueldo_anual}}€</td>
+                </tr>
+            </table>
+            <div class="beneficio">
+                <span>Beneficio Anual:</span>
+                <span class="benef">{{total}} €</span>
+                <span class="coment">Y seguira incrementando conforme pase el tiempo!!!</span>
+            </div>
+        </div>
+
+        <div class="grafico" >
+            <figure>
+                <img src="data:image/png;base64,{{grafic}}" alt="Darle Click en Consultar Para Ver Grafica"/>
+            </figure>
+        </div>
+    </div>
+     </div>
+    <div>
+        <h3>otros beneficios:</h3>
+        <h3>Autonomia durante 8 horas ininterrumpidas.</h3>
+        <h3>Trabajo los 365 del año, los 7 dias de la semana.</h3>
+    </div>
+    <figure class="foto">
+        <img src="{{url_for('static', filename='temi3.png')}}">
+    </figure>
+        <br>
+
+    </main>
+</body>
+</html>

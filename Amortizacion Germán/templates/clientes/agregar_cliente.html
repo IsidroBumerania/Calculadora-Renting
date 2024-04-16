@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <!---- Titulo ---->
+    <title>Agregar Cliente</title>
+
+    <!---- BOOTSTRAP ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <!----- CUSTOM CSS ----->
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/main.css') }}">
+</head>
+<!--------------Cuerpo ---------->
+<body>
+
+<!-------------MAIN -------------->
+<main>
+
+    <!-- Titulo -->
+    <h1 class = "display-4 text-center m-2 titulo">  Agregar Nuevo Cliente </h1>
+
+    <!---- FORM --->
+    <form action ="/crear_cliente" method="post">
+
+        <!---- SIZE/Tamaño ---->
+        <div class="col-md-4 offset-md-4 my-auto">
+
+            <!---- CIF Cliente ---->
+                        <div class="form-floating mb-2">
+                            <input type="CIFCliente" name=CIF_cliente class="form-control" id="floatingInput" autofocus>
+                            <label for="floatingInput">CIF</label>
+                        </div>
+
+            <!---- Nombre Cliente---->
+            <div class="form-floating mb-2">
+                <input type="nombreCliente"  name=nombre_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Nombre</label>
+            </div>
+
+
+            <!---- Direccion Cliente---->
+            <div class="form-floating mb-2">
+                <input type="direccionCliente"  name=direccion_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Dirección</label>
+            </div>
+
+            <!---- Codigo Postal Cliente ---->
+            <div class="form-floating mb-2">
+                <input type="codigopostalCliente" name=codigo_postal_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Código Postal</label>
+            </div>
+
+            <!---- Población Cliente---->
+            <div class="form-floating mb-2">
+                <input type="poblacionCliente"  name=poblacion_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Población</label>
+            </div>
+
+            <!---- Provincia Cliente ---->
+            <div class="form-floating mb-2">
+                <input type="provinciaCliente" name=provincia_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Provincia</label>
+            </div>
+
+            <!---- Pais Cliente---->
+            <div class="form-floating mb-2">
+                <input type="paisCliente"  name=pais_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">País</label>
+            </div>
+
+            <!---- Teléfono Cliente ---->
+            <div class="form-floating mb-2">
+                <input type="telefonoCliente" name=telefono_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Teléfono</label>
+            </div>
+
+            <!---- Movil Cliente---->
+            <div class="form-floating mb-2">
+                <input type="movilCliente"  name=movil_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Móvil</label>
+            </div>
+
+            <!---- WEB Cliente---->
+            <div class="form-floating mb-2">
+                <input type="webCliente"  name=web_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Web</label>
+            </div>
+
+            <!---- Email Cliente ---->
+            <div class="form-floating mb-2">
+                <input type="emailCliente" name=email_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">E-mail</label>
+            </div>
+
+
+            <!---- Comentario Cliente ---->
+            <div class="form-floating mb-2">
+                <input type="comentarioCliente" name=comentario_cliente class="form-control" id="floatingInput">
+                <label for="floatingInput">Comentario</label>
+            </div>
+
+        </div>
+
+        <!------- BUTTONS FORMS --------->
+        <div class ="row">
+            <!---SUBIT BUTTON ---->
+            <div class="col-md-1 offset-md-5 text-center ">
+
+                <button type="submit" class="btn btn-primary">Agregar</button>
+
+            </div>
+            <!---VOLVER BUTTON ---->
+            <div class="col">
+                <a class="btn btn-primary" href="/" role="button">Volver</a>
+            </div>
+
+        </div>
+    </form>
+
+</main>
+
+</body>
+
+</html>

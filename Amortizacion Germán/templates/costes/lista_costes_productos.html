@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <!---- TITLE ---->
+    <title>Lista Costes Productos</title>
+
+    <!---- BOOTSTRAP ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <!----- CUSTOM CSS ----->
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/main.css') }}">
+</head>
+<!------------- CUERPO ----------->
+<body>
+
+<!----MAIN ---->
+    <main>
+
+        <!-- Titulo -->
+        <h1 class = "display-4 text-center m-4 titulo">  Lista Costes Productos </h1>
+
+        <!---- Lista --->
+        <form action ="/">
+
+            <!-- JINJA TIME -->
+            {%for i in lista_costes_productos: %}
+            <li>
+
+                <!-------- Tamaño -------->
+                <div class="row col-md-7 offset-3">
+
+
+                    <!---- Nombre ---->
+                    <div class="col-md-2 form-floating ">
+                        <input type="nombreProducto" readonly class="form-control-plaintext"
+                               id="floatingPlaintextInput"value="{{i.nombre_producto}}">
+                        <label for="floatingPlaintextInput">Nombre</label>
+                    </div>
+
+                    <!---- Coste Incial del Producto ---->
+                    <div class="col-md-2 form-floating">
+                        <input type="costeinicialProducto" readonly class="form-control-plaintext"
+                               id="floatingPlaintextInput"value="{{i.coste_inicial_producto}}">
+                        <label for="floatingPlaintextInput">Coste Inicial</label>
+                    </div>
+
+                  <!---- Coste Mantenimiento del Producto ---->
+                    <div class="col-md-2 form-floating">
+                        <input type="costemantenimientoProducto" readonly class="form-control-plaintext"
+                               id="floatingPlaintextInput"value="{{i.coste_mantenimiento_producto}}">
+                        <label for="floatingPlaintextInput">Coste Mantenimiento</label>
+                    </div>
+
+                  <!---- Coste Carga del Producto ---->
+                    <div class="col-md-2 form-floating">
+                        <input type="costecargaProducto" readonly class="form-control-plaintext"
+                               id="floatingPlaintextInput"value="{{i.coste_carga_producto}}">
+                        <label for="floatingPlaintextInput">Coste de Carga</label>
+                    </div>
+
+
+
+                    <!-------BOTONES -------->
+                    <div class="col-md-4 btn-group" role="group" aria-label="Basic example">
+                        <!------- Boton de mostrar FICHA del Producto ----------->
+                        <a type="button" class="btn btn-warning" href ="/costes/ficha_costes_producto/{{i.id}}">Ficha</a>
+
+                        <!------- Boton de ELIMINAR cliente ----------->
+                        <a type="button" class="btn btn-danger" href ="/eliminar_costes_producto/{{i.id}}">Eliminar</a>
+                    </div>
+                </div>
+
+            </li>
+            {%endfor%}
+
+            <!---Botón VOLVER  ---->
+            <div class="mb-4 text-center">
+
+                <button type="submit" class="btn btn-primary">Volver</button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

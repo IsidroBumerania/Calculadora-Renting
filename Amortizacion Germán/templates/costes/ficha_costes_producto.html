@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <!---- TITLE ---->
+    <title>Ficha Costes Producto</title>
+
+    <!---- BOOTSTRAP ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <!----- CUSTOM CSS ----->
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/main.css') }}">
+</head>
+<!----------CUERPO ----------->
+<body>
+
+<!----MAIN ---->
+    <main>
+
+        <!-- Titulo -->
+        <h1 class = "display-4 text-center m-4 titulo">  Ficha Costes Producto </h1>
+
+        <!---- Lista --->
+        <div class="card col-md-10 offset-1 text-center" >
+
+            <ul class="list-group list-group-flush">
+
+                {%for i in ficha_costes_producto: %}
+
+
+                <!----- ROW ----------------->
+
+                <div class="row offset-2">
+
+                    <!---- Nombre ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                      <input type="nombreProducto" readonly class="form-control"
+                             id="floatingInput"value="{{i.nombre_producto}}">
+                      <label for="floatingInput" class="text-center">Nombre</label>
+                    </div>
+
+                    <!---- Coste Inicial del Producto ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                      <input type="costeinicialProducto" readonly class="form-control"
+                             id="floatingInput"value="{{i.coste_inicial_producto}}">
+                      <label for="floatingInput" class="text-center">Coste Inicial</label>
+                    </div>
+
+                    <!---- Coste Mantenimiento del Producto ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                      <input type="costemantenimientoProducto" readonly class="form-control"
+                             id="floatingInput"value="{{i.coste_mantenimiento_producto}}">
+                      <label for="floatingInput" class="text-center">Coste Mantenimiento</label>
+                    </div>
+
+                    <!---- Coste Carga del Producto ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                      <input type="costecargaProducto" readonly class="form-control"
+                             id="floatingInput"value="{{i.coste_carga_producto}}">
+                      <label for="floatingInput" class="text-center">Coste de Carga</label>
+                    </div>
+
+
+                </div>
+
+                <!---Botón Edición de Ficha del cliente ---->
+                <div class="mb-2 my-auto text-center">
+                    <a class="btn btn-warning" href="/costes/edicion_ficha_costes_producto_home/{{i.id}}"
+                       role="button">
+                         Editar Ficha</a>
+                </div>
+
+                <!---- END FOR ----->
+                {%endfor%}
+
+                <!--- Botón VOLVER  ---->
+                <div class="mb-2 my-auto text-center">
+                    <a class="btn btn-danger" href="/" role="button">Volver</a>
+                </div>
+            </ul>
+
+
+
+        </div>
+
+    </main>
+
+</body>
+</html>

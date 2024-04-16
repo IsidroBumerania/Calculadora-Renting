@@ -1,0 +1,291 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background: #CDDAE7;
+    }
+
+.contenedor1{
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor1-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor1-1 p{
+    width: 40%;
+    display: flex;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 40px;
+    font-size: 24px;
+}
+
+.contenedor1-1 figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    display: flex;
+    color: black;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: justify;
+    justify-content: center;
+    padding: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h3{
+    display: flex;
+    color: black;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: justify;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.box-simulador{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    style-list: none;
+    background:  #707b7c;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.70);
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.dialogo{
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogo p{
+    width: 40%;
+    display: flex;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 40px;
+    font-size: 24px;
+}
+
+.imagen2{
+     width: 200px;
+    height: 200px;
+}
+
+
+.label-dato{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+.calculo{
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    }
+.label{width:30%;}
+.datos{width:50%;}
+
+.label label{
+    width: 100%;
+    background: #a9cce3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+.datos input{
+    width: 100%;
+    background:#ebf5fb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+.boton button{
+    width: 220px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+    transition: all 0.50s;
+}
+
+.boton button:hover{
+    background: black;
+    color: white;
+}
+
+.informacion p{
+    width: 70%;
+    display: flex;
+    text-align: justify;
+    margin: auto;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.box-beneficio{
+    width: 80%;
+    border: 1px solid;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+   justify-content: center;
+}
+
+.box-beneficio2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.tabla2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    gap: 10px;
+
+}
+
+.tabla2 tr td{
+    background: #A1B5F6;
+    text-align: center;
+    padding: 8px;
+    margin: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 1px solid;
+}
+
+.tabla2 tr th{
+    background: #A1B5F6;
+    text-align: center;
+    padding: 8px;
+    margin: 26px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 1px solid;
+}
+
+.tabla2 caption h3{
+    display: flex;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.beneficio span{
+    width: 100%;
+    display: flex;
+    font-size: 22px;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center
+    border: 1px solid;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.beneficio .benef{
+    width: 100%;
+    display: flex;
+    font-size: 22px;
+    font-weight: 600;
+    color: blue;
+    justify-content: center;
+    text-align: center
+    border: 1px solid;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.beneficio .coment{
+     width: 100%;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center
+}
+
+.grafico figure img{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+}
+
+.foto img{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    margin: auto;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <!---- TITLE ---->
+    <title>Agregar Costes Producto</title>
+
+    <!---- BOOTSTRAP ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <!----- CUSTOM CSS ----->
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/main.css') }}">
+</head>
+<!-----Body/Cuerpo ----->
+<body>
+
+<!----MAIN ---->
+<main>
+
+    <!-- Titulo -->
+    <h1 class = "display-4 text-center m-2 titulo">  Agregar Nuevos Costes Producto </h1>
+
+    <!---- FORM --->
+    <form action ="/crear_costes_producto" method="post">
+
+        <!---- SIZE/Tamaño ---->
+        <div class="col-md-4 offset-md-4 my-auto">
+
+            <!---- Productos ---->
+            <div class="form-floating mb-2">
+
+                <select type="Productos"  name=nombre_producto class="form-select" id="floatingInput">
+                    <option selected>Abrir este menú</option>
+                    {%for i in todos_productos:%}
+                    <option value="{{i.nombre_producto}}">{{i.nombre_producto}}</option>
+                    {%endfor%}
+                </select>
+                <label for="floatingInput">Producto</label>
+            </div>
+
+
+            <!---- Coste Inicial del Producto---->
+            <div class="form-floating mb-2">
+              <input type="costeinicialProducto"  name=coste_inicial_producto class="form-control" id="floatingInput">
+              <label for="floatingInput">Coste Inicial</label>
+            </div>
+
+            <!---- Coste Mantenimiento del Producto---->
+            <div class="form-floating mb-2">
+              <input type="costemantenimientoProducto"  name=coste_mantenimiento_producto class="form-control" id="floatingInput">
+              <label for="floatingInput">Coste Mantenimiento</label>
+            </div>
+
+            <!---- Coste Carga del Producto---->
+            <div class="form-floating mb-2">
+              <input type="costecargaProducto"  name=coste_carga_producto class="form-control" id="floatingInput">
+              <label for="floatingInput">Coste de Carga</label>
+            </div>
+
+        </div>
+
+        <!------- BUTTONS FORMS --------->
+        <div class ="row">
+            <!---SUBIT BUTTON ---->
+            <div class="col-md-1 offset-md-5 text-center ">
+
+                <button type="submit" class="btn btn-primary">Agregar</button>
+
+            </div>
+            <!---VOLVER BUTTON ---->
+            <div class="col">
+                <a class="btn btn-primary" href="/" role="button">Volver</a>
+            </div>
+
+        </div>
+    </form>
+
+</main>
+
+</body>
+
+</html>

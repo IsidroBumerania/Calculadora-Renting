@@ -1,0 +1,19 @@
+.titulo{
+    /* Color Titulos*/
+    /*font-family:'permanent Marker',cursive;*/
+}
+
+
+.tarea_realizada_style{
+
+    text-decoration: line-through;
+    color: #cfcfcf;
+
+}
+
+body {
+
+        /* Color Fondo*/
+        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
+}

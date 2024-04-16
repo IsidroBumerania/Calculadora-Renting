@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <!---- TITLE ---->
+    <title>Ficha Cliente</title>
+
+    <!---- BOOTSTRAP ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <!----- CUSTOM CSS ----->
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/main.css') }}">
+</head>
+<!----------CUERPO ----------->
+<body>
+
+<!----MAIN ---->
+    <main>
+
+        <!-- Titulo -->
+        <h1 class = "display-4 text-center m-4 titulo">  Ficha Cliente </h1>
+
+        <!---- Lista --->
+        <div class="card col-md-10 offset-1 text-center" >
+
+            <ul class="list-group list-group-flush">
+
+                {%for i in ficha_cliente: %}
+
+
+                <!----- ROW ----------------->
+
+                <div class="row offset-2">
+                    <!---- Nombre ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="nombreCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.nombre_cliente}}">
+                        <label for="floatingInput" class="text-center">Nombre</label>
+                    </div>
+
+
+                    <!---- CIF ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="CIFCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.CIF_cliente}}">
+                        <label for="floatingInput" class="text-center">CIF</label>
+                    </div>
+
+                    <!---- Telefono ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="telefonoCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.telefono_cliente}}">
+                        <label for="floatingInput" class="text-center">Teléfono</label>
+                    </div>
+
+                </div>
+
+
+                <!----- ROW ----------------->
+
+                <div class="row offset-2">
+
+                    <!---- Móvil ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="movilCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.movil_cliente}}">
+                        <label for="floatingInput" class="text-center">Móvil</label>
+                    </div>
+
+                    <!---- Email ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="emailCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.email_cliente}}">
+                        <label for="floatingInput" class="text-center">Email</label>
+                    </div>
+
+                    <!---- WEB ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="webCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.web_cliente}}">
+                        <label for="floatingInput" class="text-center">WEB</label>
+                    </div>
+                </div>
+
+                <!----- ROW ----------------->
+                <div class="row offset-2">
+                    <!---- Dirección ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="direccionCliente" readonly class="form-control"
+                               id="floatingInput" value="{{i.direccion_cliente}}">
+                        <label for="floatingInput" class="text-center">Dirección</label>
+                    </div>
+
+                    <!---- Código Postal ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="codigopostalCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.codigo_postal_cliente}}">
+                        <label for="floatingInput" class="text-center">Código Postal</label>
+                    </div>
+
+                    <!---- Población ---->
+                    <div class="col-md-3 form-floating mb-3 my-auto">
+                        <input type="poblacionCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.poblacion_cliente}}">
+                        <label for="floatingInput" class="text-center">Población</label>
+                    </div>
+                </div>
+
+                <!----- ROW ----------------->
+                <div class="row offset-2">
+                    <!---- Provincia ---->
+                    <div class="col-md-5 form-floating mb-3 my-auto">
+                        <input type="provinciaCliente" readonly class="form-control"
+                               id="floatingInput" value="{{i.provincia_cliente}}">
+                        <label for="floatingInput" class="text-center">Provincia</label>
+                    </div>
+
+                    <!---- Paìs ---->
+                    <div class="col-md-4 form-floating mb-3 my-auto">
+                        <input type="paisCliente" readonly class="form-control"
+                               id="floatingInput"value="{{i.pais_cliente}}">
+                        <label for="floatingInput" class="text-center">Paìs</label>
+                    </div>
+
+                </div>
+
+                <!---- Comentario ---->
+                <div class="col-md-10 offset-1 form-floating mb-3 my-auto">
+                    <input type="comentarioCliente" readonly class="form-control"
+                           id="floatingInput"value="{{i.comentario_cliente}}">
+                    <label for="floatingInput" class="text-center offset-1">Comentario</label>
+                </div>
+
+
+                <!---Botón Edición de Ficha del cliente ---->
+                <div class="mb-2 my-auto text-center">
+                    <a class="btn btn-warning" href="/clientes/edicion_ficha_cliente_home/{{i.id}}" role="button">
+                         Editar Ficha</a>
+                </div>
+
+                <!---- END FOR ----->
+                {%endfor%}
+
+                <!--- Botón VOLVER  ---->
+                <div class="mb-2 my-auto text-center">
+                    <a class="btn btn-danger" href="/" role="button">Volver</a>
+                </div>
+            </ul>
+
+
+
+        </div>
+
+    </main>
+
+</body>
+</html>
